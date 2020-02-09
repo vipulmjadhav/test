@@ -1,0 +1,47 @@
+Used to ignore the files which u dont have to push
+
+file format
+
+----------------------------------------------------
+
+#if you have to ignore folder
+name-of-folder
+
+
+#files ending with log
+
+*.log
+
+#specific file
+
+hello.txt
+
+--------------------------------------------------
+
+adding .gitignore into your folder
+
+notepad .gitignore
+or
+touch .gitignore
+
+execute on command line
+
+>>git config --global core.excludesFile ~/.gitignore
+
+
+-------------------------------------------------------------
+
+Ignoring the file which u have commited already for that add a rule
+inside .gitignore
+
+for eg if we have to ignore hello.log which we have already commited then
+
+1. add a rule inside .gitignore
+echo helo.log >> .gitignore
+
+2.rm from repository   (skip --cached if we have delete the file from repo and local file system as well)
+$ git rm --cached debug.log
+rm 'debug.log'
+
+3.commit 
+$ git commit -m "Start ignoring debug.log"
