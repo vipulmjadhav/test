@@ -1,0 +1,18 @@
+ERROR while pulling the contents from remote to origin 
+>>Permission denied (publickey).
+
+Root Cause :remote repo doesnot recognise that which host is trying to connect with it.
+
+Solution :
+
+1. Create an ssh key on your machine (windows)
+C:\Users\vipul\.ssh >> ssh-keygen -t rsa -C "jadhavipul933@gmail.com"
+(if .ssh folder is not present create one)
+
+2. add into github keys (https://github.com/settings/keys)
+
+>>type C:\Users\vipul\.ssh\id_rsa.pub
+
+paste the key starting from ssh-rsa into github keys.
+
+
